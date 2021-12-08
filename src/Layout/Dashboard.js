@@ -1,67 +1,53 @@
-import React from 'react'
+// import React from 'react'
+import * as React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import Header from '../components/Header/Header'
-import MaterialTable from 'material-table'
+// import MaterialTable from 'material-table'
 import 'material-icons/iconfont/material-icons.css';
+// import MemberList from '../pages/Member/MemberList';
+import { DataGrid } from '@mui/x-data-grid';
+// import { DataGrid } from '@mui/x-data-grid';
 // import { TableHead } from '@material-ui/core'
 // import ReactTable from "react-table";
 function Dashboard() {
-    const mydata = [
-        {
-            name: "xyz",
-            surname: "xyz",
-            birthYear: "xyz",
-            birthCity: "xyz",
-        },
-        {
-            name: "xyz",
-            surname: "xyz",
-            birthYear: "xyz",
-            birthCity: "xyz",
-        },
-    ];
-    const columns = [
-        { title: "NAME", field: "name" },
-        { title: "M/F", field: "name" },
-        { title: "DoB", field: "surname" },
-        { title: "EMAIL", field: "birthYear" },
-        { title: "CONDITION", field: "birthYear" },
-        { title: "YEAR OF DIAGNOSIS", field: "birthYear" },
-        { title: "ROLE", field: "birthYear" },
-        { title: "MEDICATIONS", field: "birthYear" },
-        { title: "DOCTOR", field: "birthYear" },
-        { title: "ADVOCATE", field: "birthYear" },
-        { title: "PHONE", field: "birthYear" },
-    ];
-    const User_Delete = (index) => {
-        console.log(index);
-    };
+    // const columns = [
+    //     { field: 'id', headerName: 'ID', width: 70 },
+    //     { field: 'firstName', headerName: 'First name', width: 130 },
+    //     { field: 'lastName', headerName: 'Last name', width: 130 },
+    //     {
+    //         field: 'age',
+    //         headerName: 'Age',
+    //         type: 'number',
+    //         width: 90,
+    //     },
+    //     {
+    //         field: 'fullName',
+    //         headerName: 'Full name',
+    //         description: 'This column has a value getter and is not sortable.',
+    //         sortable: false,
+    //         width: 160,
+    //         valueGetter: (params) =>
+    //             `${params.getValue(params.id, 'firstName') || ''} ${params.getValue(params.id, 'lastName') || ''
+    //             }`,
+    //     },
+    // ];
+
+    // const rows = [
+    //     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+    //     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+    //     { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+    //     { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+    //     { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+    //     { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+    //     { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+    //     { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+    //     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+    // ];
     return (
         <>
             <Header />
             <div style={{ marginLeft: "80px" }}>
-                <Navbar />
-                <MaterialTable
-                    columns={columns}
-                    data={mydata}
-                    options={{
-                        showTitle: false,
-                        // exportButton: true,
-                        selection: true,
-                        search: false,
-                        paging: false,
-                        headerStyle: { backgroundColor: '#f9f9f9', color: "dodgerblue" }
-                    }}
-                    actions={[
-                        {
-                            icon: "delete",
-                            tooltip: "Delete User",
-                            onClick: (event, rowData) => {
-                                User_Delete(rowData.author);
-                            },
-                        },
-                    ]}
-                />
+
             </div>
         </>
     )
